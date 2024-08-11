@@ -30,4 +30,8 @@ var tamaños;
 ;
 const variable1 = tamaños.grande;
 console.log(variable1);
+;
+const estado = 2;
+console.log(estado);
 //# sourceMappingURL=practice.js.map
+

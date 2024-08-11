@@ -65,3 +65,35 @@ enum tamaños {chico = "s",mediano = "m",grande = "l",extragrande = "xl"};
 const variable1 = tamaños.grande;
 
 console.log(variable1);
+
+const enum LoadingState{Idle, Loading, Success, Error};
+
+const estado = LoadingState.Success;
+
+console.log(estado);
+
+// los objetos en typescript:
+
+
+//para no hacerlo engorroso definimos los tipos del objeto o la funcion
+//antes de declarar el objeto:
+//(producto es un nombre opcional)
+type producto ={
+    //readonly hace que el valor de id no pueda variar fuera de la declaracion
+    //del objeto.
+    readonly id: number,
+    //el signo de interrogacion hace que la asignacion del tipo de la propiedad
+    //del objeto sea opcional.
+    nombre?: string,
+    //tambien podemos asignar tipos de enum donde el primero es el nombre
+    //y el segundo el nombre del enum:
+    tallas: tamaños
+}   
+const object: producto ={ //asignamos el conjunto de tipos:"productos" al objeto
+    id:1,
+    nombre:'escoba',
+    tallas: tamaños.extragrande
+};
+
+//otro ejemplo pero con array:
+const arr: producto[] = [];
